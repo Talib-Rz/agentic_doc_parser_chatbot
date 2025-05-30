@@ -1,2 +1,5 @@
-streamlit>=1.30.0
-agentic-doc>=0.1.0
+streamlit
+fpdf
+fpdf2
+beautifulsoup4
+agentic_doc
