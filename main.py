@@ -171,15 +171,15 @@ if uploaded_file:
         st.info("Click 'Proceed' in the sidebar to parse and display PDF content.")
     
 
-    if "parsed_chunks" in st.session_state and st.session_state["parsed_chunks"]:
-        if st.button("Download Modified Chunks as PDF"):
-            pdf_file = create_pdf_from_chunks(st.session_state["parsed_chunks"])
-            st.download_button(
-                label="Click to Download PDF",
-                data=pdf_file,
-                file_name="parsed_chunks.pdf",
-                mime="application/pdf"
-            )
+    # if "parsed_chunks" in st.session_state and st.session_state["parsed_chunks"]:
+    #     if st.button("Download Modified Chunks as PDF"):
+    #         pdf_file = create_pdf_from_chunks(st.session_state["parsed_chunks"])
+    #         st.download_button(
+    #             label="Click to Download PDF",
+    #             data=pdf_file,
+    #             file_name="parsed_chunks.pdf",
+    #             mime="application/pdf"
+    #         )
 
 
 else:
