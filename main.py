@@ -9,7 +9,9 @@ st.set_page_config(page_title="PDF Parser Demo", layout="wide")
 
 # Sidebar - API Key input (optional, depends on your library needs)
 st.sidebar.header("Configuration")
-VISION_AGENT_API_KEY = st.sidebar.text_input("Enter API Key", type="password")  # You can remove this if not needed
+
+# VISION_AGENT_API_KEY = st.sidebar.text_input("Enter API Key", type="password")  # You can remove this if not needed
+VISION_AGENT_API_KEY = st.secrets.get("VISION_AGENT_API_KEY")
 
 
 # Sidebar - File uploader
