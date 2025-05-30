@@ -17,7 +17,7 @@ VISION_AGENT_API_KEY = st.secrets.get("VISION_AGENT_API_KEY")
 # Sidebar - File uploader
 uploaded_file = st.sidebar.file_uploader("Upload a PDF", type=["pdf"])
 
-st.title("Agentic PDF Extractor App")
+st.title("Agentic PDF Extractor ~Andrew Ng")
 st.markdown("Upload a PDF from the sidebar to extract and view its contents page-wise.")
 
 # If a file is uploaded
