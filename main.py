@@ -11,6 +11,7 @@ st.set_page_config(page_title="PDF Parser Demo", layout="wide")
 st.sidebar.header("Configuration")
 api_key = st.sidebar.text_input("Enter API Key", type="password")  # You can remove this if not needed
 
+
 # Sidebar - File uploader
 uploaded_file = st.sidebar.file_uploader("Upload a PDF", type=["pdf"])
 
@@ -32,7 +33,7 @@ if uploaded_file:
         # Parse the PDF using agentic_doc
         with st.spinner("Parsing PDF..."):
             try:
-                results = parse_documents([tmp_pdf_path])
+                results = parse_documents([tmp_pdf_path], api_key=api_key)
                 parsed_doc = results[0]
                 parsed_chunks = parsed_doc.chunks
 
